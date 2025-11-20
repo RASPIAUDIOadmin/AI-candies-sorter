@@ -9,95 +9,148 @@ const Assembly: React.FC = () => {
         subtitle="Préparez vos ciseaux, votre scotch et votre Arduino !" 
       />
 
+      {/* PDF Download Button */}
+      <div className="mb-10 flex flex-col items-center justify-center text-center">
+        <div className="bg-orange-50 border border-orange-200 rounded-2xl p-6 max-w-2xl w-full shadow-sm">
+            <i className="fas fa-print text-4xl text-orange-500 mb-4"></i>
+            <h3 className="text-xl font-bold text-slate-800 mb-2">Gabarit à imprimer</h3>
+            <p className="text-slate-600 mb-6">
+                Pour construire le corps du robot, vous devez imprimer le patron sur du papier cartonné (de préférence).
+            </p>
+            <a
+                href="https://storage.googleapis.com/tiny-sorter/Tiny-Sorter-Print-Out.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 bg-slate-800 text-white px-8 py-4 rounded-xl hover:bg-slate-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+            >
+                <i className="fas fa-file-pdf text-2xl text-red-400"></i>
+                <div className="text-left">
+                    <div className="font-bold text-lg leading-tight">Télécharger le PDF</div>
+                    <div className="text-xs text-slate-400 font-normal">Format A4 - Imprimer à 100%</div>
+                </div>
+                <i className="fas fa-download ml-4"></i>
+            </a>
+        </div>
+      </div>
+
       <div className="space-y-12">
         
-        {/* Papercraft */}
+        {/* Instructions */}
         <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100">
           <div className="bg-slate-800 p-4 text-white flex items-center justify-between">
-             <h3 className="text-xl font-bold"><span className="bg-blue-500 text-white w-8 h-8 rounded-full inline-flex items-center justify-center mr-3 text-sm">1</span>Découpage & Pliage</h3>
-             <i className="fas fa-cut text-slate-400"></i>
-          </div>
-          <div className="p-8 grid md:grid-cols-2 gap-8 items-start">
-            <div>
-                <ul className="space-y-4">
-                    <li className="flex items-start">
-                        <i className="fas fa-print mt-1 text-blue-500 mr-3"></i>
-                        <span>Découper le périmètre des deux figures (Modèles PDF).</span>
-                    </li>
-                    <li className="flex items-start">
-                        <i className="fas fa-copy mt-1 text-blue-500 mr-3"></i>
-                        <span>Plier les figures au niveau des pointillés.</span>
-                    </li>
-                    <li className="flex items-start">
-                        <i className="fas fa-tape mt-1 text-blue-500 mr-3"></i>
-                        <span>Ajouter le scotch au niveau des lettres correspondantes pour relier les parties (A sur A, B sur B...).</span>
-                    </li>
-                    <li className="flex items-start">
-                        <i className="fas fa-scroll mt-1 text-blue-500 mr-3"></i>
-                        <span>Fabriquer un tube en papier pour guider les bonbons vers le trieur.</span>
-                    </li>
-                </ul>
-            </div>
-            <div className="bg-slate-100 rounded-lg p-4 flex items-center justify-center h-64">
-                 {/* Placeholder for PDF instructional image */}
-                 <img src="https://picsum.photos/400/300?grayscale" alt="Papercraft assembly" className="object-contain h-full opacity-80 hover:opacity-100 transition-opacity rounded" />
-            </div>
-          </div>
-        </div>
-
-        {/* Electronics */}
-        <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100">
-           <div className="bg-slate-800 p-4 text-white flex items-center justify-between">
-             <h3 className="text-xl font-bold"><span className="bg-blue-500 text-white w-8 h-8 rounded-full inline-flex items-center justify-center mr-3 text-sm">2</span>Électronique</h3>
-             <i className="fas fa-microchip text-slate-400"></i>
+             <h3 className="text-xl font-bold"><span className="bg-blue-500 text-white w-8 h-8 rounded-full inline-flex items-center justify-center mr-3 text-sm">1</span>L’Assemblage</h3>
+             <i className="fas fa-tools text-slate-400"></i>
           </div>
           <div className="p-8">
-            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-                <p className="font-bold text-yellow-800">Modification 2 Moteurs :</p>
-                <p className="text-yellow-700 text-sm">Ce robot est modifié pour avoir un moteur de distribution et un moteur de tri.</p>
+            <div className="mb-6 bg-blue-50 p-4 rounded-lg border border-blue-200">
+                <h4 className="font-bold text-blue-800 mb-2"><i className="fas fa-info-circle mr-2"></i>Note sur les Moteurs</h4>
+                <p className="text-blue-700 text-sm">
+                    Ce robot a été modifié pour avoir <strong>2 moteurs</strong> : un pour distribuer les bonbons et l'autre pour trier (gauche/droite) en fonction de la couleur.
+                </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h4 className="font-bold text-lg mb-4 border-b pb-2">Moteur de Tri (Servo)</h4>
-                    <ul className="space-y-3 text-sm md:text-base">
-                        <li className="flex items-center justify-between bg-slate-50 p-2 rounded border">
-                            <span>Fil Rouge</span>
-                            <span className="font-mono font-bold text-red-600">5V</span>
-                        </li>
-                        <li className="flex items-center justify-between bg-slate-50 p-2 rounded border">
-                            <span>Fil Noir/Marron</span>
-                            <span className="font-mono font-bold text-slate-800">GND (Masse)</span>
-                        </li>
-                        <li className="flex items-center justify-between bg-slate-50 p-2 rounded border">
-                            <span>Fil Jaune/Orange</span>
-                            <span className="font-mono font-bold text-blue-600">Pin D9</span>
-                        </li>
-                    </ul>
-                    <p className="mt-4 text-sm text-slate-500 italic">Placer ce moteur au niveau de la lettre C et le fixer avec du scotch.</p>
-                </div>
-                 <div>
-                    <h4 className="font-bold text-lg mb-4 border-b pb-2">Moteur Distributeur</h4>
-                    <ul className="space-y-3 text-sm md:text-base">
-                        <li className="flex items-center justify-between bg-slate-50 p-2 rounded border">
-                            <span>Alimentation</span>
-                            <span className="font-mono font-bold text-red-600">5V / GND</span>
-                        </li>
-                        <li className="flex items-center justify-between bg-slate-50 p-2 rounded border">
-                            <span>Signal</span>
-                            <span className="font-mono font-bold text-blue-600">Voir P5.js Code</span>
-                        </li>
-                    </ul>
-                    <p className="mt-4 text-sm text-slate-500 italic">Ce moteur permet de faire tomber les bonbons un par un.</p>
-                </div>
-            </div>
-            
-            <div className="mt-8 text-center">
-                <span className="inline-block bg-slate-100 px-4 py-2 rounded-full text-slate-600 text-sm font-medium">
-                    <i className="fas fa-usb mr-2"></i>
-                    Connecter la carte Arduino à l'ordinateur via USB
-                </span>
-            </div>
+            <ul className="space-y-6">
+                <li className="flex items-start p-4 hover:bg-slate-50 rounded-lg transition-colors">
+                    <div className="flex-shrink-0 w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold mr-4">1</div>
+                    <div>
+                        <strong className="block text-slate-800 text-lg">Découpage</strong>
+                        <span className="text-slate-600">Découper le périmètre des deux figures (lignes pleines).</span>
+                    </div>
+                </li>
+                <li className="flex items-start p-4 hover:bg-slate-50 rounded-lg transition-colors">
+                    <div className="flex-shrink-0 w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold mr-4">2</div>
+                    <div>
+                        <strong className="block text-slate-800 text-lg">Pliage</strong>
+                        <span className="text-slate-600">Plier les figures au niveau des pointillés. Utiliser une règle pour des plis nets.</span>
+                    </div>
+                </li>
+                <li className="flex items-start p-4 hover:bg-slate-50 rounded-lg transition-colors">
+                    <div className="flex-shrink-0 w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold mr-4">3</div>
+                    <div>
+                        <strong className="block text-slate-800 text-lg">Assemblage Papier</strong>
+                        <span className="text-slate-600">Ajouter le scotch au niveau des lettres correspondantes (A sur A, B sur B...) pour les relier.</span>
+                    </div>
+                </li>
+                <li className="flex items-start p-4 hover:bg-slate-50 rounded-lg transition-colors">
+                    <div className="flex-shrink-0 w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold mr-4">4</div>
+                    <div>
+                        <strong className="block text-slate-800 text-lg">Installation des Moteurs</strong>
+                        <span className="text-slate-600 mb-2 block">Placer le premier servo moteur (Tri) dans votre figure au niveau de la <strong>lettre C</strong>. Installez le second moteur pour la distribution selon votre modification. Accrochez-les avec du scotch.</span>
+                    </div>
+                </li>
+                <li className="flex items-start p-4 hover:bg-slate-50 rounded-lg transition-colors">
+                    <div className="flex-shrink-0 w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold mr-4">5</div>
+                    <div className="w-full">
+                        <strong className="block text-slate-800 text-lg">Branchement Électrique</strong>
+                        <span className="text-slate-600 mb-4 block">Il y a 2 moteurs à brancher sur la carte Arduino. Assurez-vous de respecter les couleurs des câbles.</span>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {/* Moteur 1 */}
+                            <div className="bg-white p-4 rounded-lg border-2 border-yellow-100 shadow-sm">
+                                <div className="flex items-center justify-between border-b border-slate-100 pb-2 mb-3">
+                                    <span className="font-bold text-slate-800">Moteur 1 (Tri)</span>
+                                    <span className="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded">PIN D9</span>
+                                </div>
+                                <div className="space-y-2 text-sm">
+                                    <div className="flex items-center justify-between bg-red-50 p-2 rounded">
+                                        <span className="text-red-700 font-medium"><i className="fas fa-bolt mr-2"></i>Rouge</span>
+                                        <span className="font-bold text-slate-700">5V</span>
+                                    </div>
+                                    <div className="flex items-center justify-between bg-slate-100 p-2 rounded">
+                                        <span className="text-slate-600 font-medium"><i className="fas fa-ground mr-2"></i>Noir</span>
+                                        <span className="font-bold text-slate-700">GND</span>
+                                    </div>
+                                    <div className="flex items-center justify-between bg-yellow-50 p-2 rounded border border-yellow-200">
+                                        <span className="text-yellow-700 font-medium"><i className="fas fa-wave-square mr-2"></i>Jaune</span>
+                                        <span className="font-bold text-slate-900">PIN D9</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Moteur 2 */}
+                            <div className="bg-white p-4 rounded-lg border-2 border-blue-100 shadow-sm">
+                                <div className="flex items-center justify-between border-b border-slate-100 pb-2 mb-3">
+                                    <span className="font-bold text-slate-800">Moteur 2 (Distribution)</span>
+                                    <span className="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">PIN D6</span>
+                                </div>
+                                <div className="space-y-2 text-sm">
+                                    <div className="flex items-center justify-between bg-red-50 p-2 rounded">
+                                        <span className="text-red-700 font-medium"><i className="fas fa-bolt mr-2"></i>Rouge</span>
+                                        <span className="font-bold text-slate-700">5V</span>
+                                    </div>
+                                    <div className="flex items-center justify-between bg-slate-100 p-2 rounded">
+                                        <span className="text-slate-600 font-medium"><i className="fas fa-ground mr-2"></i>Noir</span>
+                                        <span className="font-bold text-slate-700">GND</span>
+                                    </div>
+                                    <div className="flex items-center justify-between bg-blue-50 p-2 rounded border border-blue-200">
+                                        <span className="text-blue-700 font-medium"><i className="fas fa-wave-square mr-2"></i>Jaune</span>
+                                        <span className="font-bold text-slate-900">PIN D6</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div className="mt-4 p-3 bg-slate-100 rounded text-xs text-slate-500 italic">
+                            <i className="fas fa-exclamation-triangle mr-1"></i>
+                            Si vous manquez de ports 5V ou GND sur l'Arduino, vous pouvez utiliser une breadboard (planche à pain) pour multiplier les connexions.
+                        </div>
+                    </div>
+                </li>
+                <li className="flex items-start p-4 hover:bg-slate-50 rounded-lg transition-colors">
+                    <div className="flex-shrink-0 w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold mr-4">6</div>
+                    <div>
+                        <strong className="block text-slate-800 text-lg">Connexion USB</strong>
+                        <span className="text-slate-600">Brancher votre carte Arduino avec votre ordinateur via le câble USB.</span>
+                    </div>
+                </li>
+                <li className="flex items-start p-4 hover:bg-slate-50 rounded-lg transition-colors">
+                    <div className="flex-shrink-0 w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold mr-4">7</div>
+                    <div>
+                        <strong className="block text-slate-800 text-lg">Le Tube</strong>
+                        <span className="text-slate-600">Faire un tube en papier pour guider les bonbons vers le trieur.</span>
+                    </div>
+                </li>
+            </ul>
           </div>
         </div>
 

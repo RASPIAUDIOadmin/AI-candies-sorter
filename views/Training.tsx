@@ -38,14 +38,14 @@ const Training: React.FC = () => {
                     </div>
                     <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-50 p-4 rounded border border-slate-200 shadow-sm">
                         <div className="flex items-center justify-between space-x-2 mb-1">
-                            <div className="font-bold text-slate-900">Préparation des Classes</div>
+                            <div className="font-bold text-slate-900">Configuration des Classes</div>
                         </div>
                         <div className="text-slate-600 text-sm">
-                            Renommez les 3 classes exactement ainsi :
+                            Ajoutez une classe pour en avoir 3 au total. Renommez-les exactement ainsi :
                             <ul className="mt-2 space-y-1 font-mono bg-white p-2 rounded border">
-                                <li><span className="text-red-500">0</span> : Rien (Vide)</li>
-                                <li><span className="text-blue-500">1</span> : Couleur A (ex: M&M Rouge)</li>
-                                <li><span className="text-green-500">2</span> : Couleur B (ex: M&M Jaune)</li>
+                                <li><span className="text-red-500">0</span> : Rien (Sans bonbon)</li>
+                                <li><span className="text-blue-500">1</span> : Couleur A (ex: Rouge)</li>
+                                <li><span className="text-green-500">2</span> : Couleur B (ex: Jaune)</li>
                             </ul>
                         </div>
                     </div>
@@ -58,14 +58,17 @@ const Training: React.FC = () => {
                     </div>
                     <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-50 p-4 rounded border border-slate-200 shadow-sm">
                         <div className="flex items-center justify-between space-x-2 mb-1">
-                            <div className="font-bold text-slate-900">Prise de Photos (Webcam)</div>
+                            <div className="font-bold text-slate-900">Prise de Photos</div>
                         </div>
                         <div className="text-slate-600 text-sm">
-                            <ul className="list-disc list-inside space-y-1">
-                                <li><strong>Classe 0 :</strong> Ajouter des photos du fond vide (sans bonbon).</li>
-                                <li><strong>Classe 1 & 2 :</strong> Ajouter des bonbons de chaque couleur.</li>
+                            <ul className="list-disc list-inside space-y-2">
+                                <li><strong>Pour la classe 0 :</strong> Ajouter des photos du fond vide (sans bonbon).</li>
+                                <li><strong>Pour les classes 1 et 2 :</strong> Ajouter des bonbons de la couleur correspondante.</li>
                             </ul>
-                            <p className="mt-2 text-xs italic text-slate-500">Important : Changez la position du bonbon pour chaque photo afin de rendre le modèle robuste.</p>
+                            <div className="mt-2 p-2 bg-yellow-50 border border-yellow-200 rounded text-xs text-yellow-800">
+                                <i className="fas fa-lightbulb mr-1"></i>
+                                <strong>Important :</strong> Pour les classes 1 et 2, changez la position du bonbon pour chaque photo afin que le robot le reconnaisse partout.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -80,9 +83,7 @@ const Training: React.FC = () => {
                             <div className="font-bold text-slate-900">Entraînement</div>
                         </div>
                         <div className="text-slate-600 text-sm">
-                            Appuyez sur le bouton <strong>"Train Model"</strong>. Patientez pendant que le navigateur apprend à reconnaître vos bonbons.
-                            <br />
-                            <span className="text-xs text-slate-400 block mt-1">Ne fermez pas l'onglet !</span>
+                            Appuyez sur le bouton <strong>"Train Model"</strong>. Patientez pendant l'entraînement.
                         </div>
                     </div>
                 </div>
@@ -96,7 +97,13 @@ const Training: React.FC = () => {
                             <div className="font-bold text-slate-900">Exporter le modèle</div>
                         </div>
                         <div className="text-slate-600 text-sm">
-                           Une fois entraîné, cliquez sur "Export Model". Choisissez "Upload" (Cloud) et copiez l'URL générée. Vous en aurez besoin pour P5.js !
+                           Une fois entraîné :
+                           <ol className="list-decimal list-inside mt-1 ml-1">
+                               <li>Cliquez sur "Export Model"</li>
+                               <li>Choisissez l'onglet "Upload" (Cloud)</li>
+                               <li>Cliquez sur "Upload my model"</li>
+                               <li>Copiez le lien généré (URL)</li>
+                           </ol>
                         </div>
                     </div>
                 </div>

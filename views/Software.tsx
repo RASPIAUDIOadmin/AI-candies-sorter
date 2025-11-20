@@ -19,20 +19,19 @@ const Software: React.FC = () => {
                 <h3 className="text-xl font-bold text-slate-800">1. Arduino</h3>
             </div>
             <p className="text-slate-600 mb-6 flex-grow">
-                Il faut téléverser le code nécessaire dans l'Arduino pour qu'il puisse recevoir les ordres du navigateur.
-                Assurez-vous que le Bootloader est le bon.
+                Utilisez le compilateur en ligne Arduino pour téléverser le code sur votre carte. Cela permet de contrôler les 2 moteurs.
             </p>
             <div className="bg-slate-50 p-3 rounded border mb-4 text-sm">
                 <i className="fas fa-info-circle text-blue-500 mr-2"></i>
                 Vitesse du port : <strong>9600 bps</strong>
             </div>
             <a 
-                href="https://create.arduino.cc/editor" 
+                href="https://app.arduino.cc/sketches/b4cb0ba5-a9b4-474d-a899-16bec93c7241?view-mode=preview" 
                 target="_blank" 
                 rel="noreferrer"
                 className="w-full block text-center bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition-colors font-medium"
             >
-                Ouvrir Arduino Web Editor
+                Ouvrir le compilateur en ligne Arduino <i className="fas fa-upload ml-2"></i>
             </a>
         </div>
 
@@ -45,11 +44,11 @@ const Software: React.FC = () => {
                 <h3 className="text-xl font-bold text-slate-800">2. P5.js</h3>
             </div>
             <p className="text-slate-600 mb-6 flex-grow">
-                C'est le cerveau logiciel ! Ce script P5.js utilise votre modèle Teachable Machine pour dire à l'Arduino quel moteur bouger.
+                C'est le cerveau logiciel ! Ce script fait le lien entre la caméra (IA) et l'Arduino.
             </p>
             <div className="bg-slate-50 p-3 rounded border mb-4 text-sm">
                 <i className="fas fa-exclamation-circle text-pink-500 mr-2"></i>
-                N'oubliez pas de coller votre <strong>Lien Modèle</strong> dans le code P5.js !
+                Remplacez l'URL du modèle dans le code par la vôtre !
             </div>
             <a 
                 href="https://editor.p5js.org/olivier.ros/sketches/S0Hg4Jlt2" 
@@ -57,7 +56,7 @@ const Software: React.FC = () => {
                 rel="noreferrer"
                 className="w-full block text-center bg-pink-600 text-white py-2 rounded-lg hover:bg-pink-700 transition-colors font-medium"
             >
-                Ouvrir le Sketch P5.js
+                Accéder au code P5.js <i className="fas fa-external-link-alt ml-2"></i>
             </a>
         </div>
       </div>
@@ -68,7 +67,7 @@ const Software: React.FC = () => {
             <div className="bg-slate-700 px-4 py-2 rounded">Webcam</div>
             <i className="fas fa-arrow-right hidden md:block"></i>
             <i className="fas fa-arrow-down md:hidden"></i>
-            <div className="bg-slate-700 px-4 py-2 rounded">Teachable Machine (Navigateur)</div>
+            <div className="bg-slate-700 px-4 py-2 rounded">Teachable Machine (IA)</div>
             <i className="fas fa-arrow-right hidden md:block"></i>
             <i className="fas fa-arrow-down md:hidden"></i>
             <div className="bg-pink-600 px-4 py-2 rounded font-bold">P5.js (Logique)</div>
