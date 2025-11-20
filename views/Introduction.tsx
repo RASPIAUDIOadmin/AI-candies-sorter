@@ -2,16 +2,17 @@ import React, { useState } from 'react';
 import SectionHeader from '../components/SectionHeader';
 import FlowDiagram from '../components/FlowDiagram';
 
-// Helper pour gérer les chemins sur GitHub Pages
+// Helper robuste pour gérer les chemins sur GitHub Pages et en Local
 const getAssetPath = (filename: string) => {
-  const meta = import.meta as any;
-  // Fallback si env n'est pas défini (cas de certains environnements de prévisualisation)
-  const base = meta.env?.BASE_URL ?? '/AI-candies-sorter/';
+  // Détection simple : si on n'est pas en localhost, on suppose qu'on est sur GitHub Pages
+  const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
   
-  // Retire le slash final de base si présent et le slash initial de filename si présent pour éviter les doubles slashs
-  const cleanBase = base.endsWith('/') ? base.slice(0, -1) : base;
+  // Sur GitHub Pages, le chemin doit inclure le nom du dépôt
+  // Sur localhost, c'est à la racine
+  const base = isLocal ? '/' : '/AI-candies-sorter/';
+  
   const cleanFile = filename.startsWith('/') ? filename.slice(1) : filename;
-  return `${cleanBase}/${cleanFile}`;
+  return `${base}${cleanFile}`;
 };
 
 const MediaPlaceholder: React.FC<{ type: 'video' | 'image', filename: string }> = ({ type, filename }) => (
