@@ -76,6 +76,16 @@ const Introduction: React.FC = () => {
         </ul>
       </div>
 
+      <div className="bg-white border border-slate-200 rounded-xl p-4 mb-8">
+        <h4 className="text-base font-bold text-slate-800 mb-2">Brief pedagogique</h4>
+        <p className="text-sm text-slate-700 leading-relaxed">
+          Une IA, c'est comme apprendre a reconnaitre des bonbons : tu montres plein d'exemples (apprentissage),
+          l'ordi repere des details (couleurs, contours) et construit un modele. Quand un nouveau bonbon passe,
+          il compare avec ce qu'il a appris et choisit la bonne action (inference). Plus tes exemples sont varies et propres,
+          plus le tri est fiable.
+        </p>
+      </div>
+
       <div className="mb-12 space-y-8">
         {/* Video Principale - YouTube conserve */}
         <div className="relative w-full max-w-2xl mx-auto">

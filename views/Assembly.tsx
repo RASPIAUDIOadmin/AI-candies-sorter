@@ -18,10 +18,10 @@ const Assembly: React.FC = () => {
             <i className="fas fa-print text-4xl text-orange-500 mb-4"></i>
             <h3 className="text-xl font-bold text-slate-800 mb-2">Gabarit a imprimer</h3>
             <p className="text-slate-600 mb-6">
-                Pour construire le corps du robot, vous devez imprimer le patron sur du papier cartonne (de preference).
+                Pour construire le corps du robot, imprime le patron sur du papier cartonne (de preference).
             </p>
             <a
-                href="https://storage.googleapis.com/tiny-sorter/Tiny-Sorter-Print-Out.pdf"
+                href="./candy_sorter_cuting_template.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-3 bg-slate-800 text-white px-8 py-4 rounded-xl hover:bg-slate-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
@@ -101,7 +101,7 @@ const Assembly: React.FC = () => {
                                 <div className="space-y-2 text-sm">
                                     <div className="flex items-center justify-between bg-red-50 p-2 rounded">
                                         <span className="text-red-700 font-medium"><i className="fas fa-bolt mr-2"></i>Rouge</span>
-                                        <span className="font-bold text-slate-700">5V</span>
+                                        <span className="font-bold text-slate-700">3V3</span>
                                     </div>
                                     <div className="flex items-center justify-between bg-slate-100 p-2 rounded">
                                         <span className="text-slate-600 font-medium"><i className="fas fa-ground mr-2"></i>Noir</span>
