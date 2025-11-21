@@ -79,7 +79,7 @@ const Assembly: React.FC = () => {
                     <div>
                         <strong className="block text-slate-800 text-lg">Installation des Moteurs</strong>
                         <span className="text-slate-600 mb-2 block">
-                          Place le servo de tri dans la figure au niveau de la <strong>lettre C</strong> et scotche-le. Accroche ensuite le deuxieme moteur sur le tube ou la gouttiere pour faire pivoter la tete du robot.
+                          Place le servo de tri dans la figure au niveau de la <strong>lettre C</strong> et scotche-le. Accroche ensuite le deuxieme moteur sur le tube ou la gouttiere pour faire pivoter la tete du robot. Fixe la tete du mini-robot sur le moteur 1 et, sur le moteur 2, mets la meme tete a l'envers.
                         </span>
                     </div>
                 </li>
@@ -88,7 +88,7 @@ const Assembly: React.FC = () => {
                     <div className="w-full">
                         <strong className="block text-slate-800 text-lg">Branchement Electrique</strong>
                         <span className="text-slate-600 mb-4 block">
-                          Branche les 2 moteurs sur l'Arduino en respectant les couleurs : rouge sur +, noir sur GND, jaune sur le signal. Resume rapide : Moteur 1 (Tri) rouge 5V / noir GND / jaune D9. Moteur 2 rouge 3V3 / noir GND / jaune D9 ou D6 selon ta carte.
+                          Branche les 2 moteurs en respectant les couleurs : <strong>rouge = +</strong>, <strong>noir = GND</strong>, <strong>jaune = signal</strong>. Resume rapide : Moteur 1 (Tri) rouge 5V / noir GND / jaune D9. Moteur 2 rouge 3V3 / noir GND / jaune sur D6.
                         </span>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -177,11 +177,16 @@ const Assembly: React.FC = () => {
                     <div>
                         <strong className="block text-slate-800 text-lg">Le Tube</strong>
                         <span className="text-slate-600 block">
-                          Faire un tube en papier (un peu plus large qu'un Smarties) et l'accrocher a la gouttiere de bonbons. Fixer le 2e moteur dessus, ajouter la tete du mini-robot a l'envers sur le moteur et, si besoin, coller un petit bout de papier a l'arriere pour empecher les bonbons de tomber quand c'est ferme.
+                          Faire un tube en papier (un peu plus large qu'un Smarties) et l'accrocher a la gouttiere de bonbons. Fixer le 2e moteur dessus, ajouter la tete du mini-robot a l'envers sur ce moteur et, si besoin, coller un petit bout de papier a l'arriere pour empecher les bonbons de tomber quand c'est ferme.
                         </span>
                     </div>
                 </li>
             </ul>
+
+            <div className="mt-6 bg-amber-50 border border-amber-200 rounded-lg p-4 text-amber-800 text-sm">
+              <i className="fas fa-grin-alt mr-2"></i>
+              Note avec humour : les yeux mobiles colles sur la tete sont fortement conseilles. Ca ne rend pas le robot plus precis, mais nettement plus cool. :)
+            </div>
           </div>
         </div>
 

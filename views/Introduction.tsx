@@ -3,8 +3,9 @@ import SectionHeader from '../components/SectionHeader';
 import FlowDiagram from '../components/FlowDiagram';
 import photo1 from '../photos/photo-1.jpg';
 import photo2 from '../photos/photo-2.jpg';
+import robotHead from '../photos/robot headwith eyes.png';
 
-const MediaPlaceholder: React.FC<{ type: 'video' | 'image'; filename: string }> = ({ type, filename }) => (
+const MediaPlaceholder: React.FC<{ type: 'video'; filename: string }> = ({ type, filename }) => (
   <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-100 border-2 border-dashed border-slate-300 text-slate-400 p-4 text-center">
     <i className={`fas ${type === 'video' ? 'fa-video' : 'fa-image'} text-3xl mb-2`}></i>
     <span className="font-bold text-slate-600 text-sm">Fichier manquant</span>
@@ -33,16 +34,10 @@ const Introduction: React.FC = () => {
       src: photo2,
     },
     {
-      title: 'Photo 3',
-      filename: 'photo-3.jpg',
-      description: 'Ajoutez une autre vue du robot.',
-      src: undefined,
-    },
-    {
-      title: 'Photo 4',
-      filename: 'photo-4.jpg',
-      description: 'Ajoutez une photo en situation reelle.',
-      src: undefined,
+      title: 'Tete du robot (avec yeux)',
+      filename: 'robot headwith eyes.png',
+      description: 'Les yeux mobiles sont fortement recommandes (et rendent le robot trop stylA) !',
+      src: robotHead,
     },
   ];
 
@@ -70,6 +65,15 @@ const Introduction: React.FC = () => {
             Ouvrir Teachable Machine <i className="fas fa-external-link-alt text-xs"></i>
           </a>
         </div>
+      </div>
+
+      <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-8">
+        <h4 className="text-base font-bold text-blue-800 mb-2">L'IA en 3 idees (version ado)</h4>
+        <ul className="text-sm text-blue-900 space-y-1 list-disc list-inside">
+          <li>Tu filmes plusieurs exemples (bonbon A, bonbon B, rien) : c'est l'entrainement.</li>
+          <li>L'ordi memorise les differents aspects (couleurs, formes) et fabrique un modele.</li>
+          <li>Quand une nouvelle image arrive, il fait une inference : il decide a gauche, a droite ou rien.</li>
+        </ul>
       </div>
 
       <div className="mb-12 space-y-8">
@@ -118,16 +122,12 @@ const Introduction: React.FC = () => {
                 className="group rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white flex flex-col"
               >
                 <div className="relative aspect-[3/4] bg-slate-100">
-                  {photo.src ? (
-                    <img
-                      src={photo.src}
-                      alt={photo.description}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <MediaPlaceholder type="image" filename={`photos/${photo.filename}`} />
-                  )}
+                  <img
+                    src={photo.src}
+                    alt={photo.description}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="p-3 space-y-1">
                   <p className="text-sm font-semibold text-slate-700">{photo.title}</p>
