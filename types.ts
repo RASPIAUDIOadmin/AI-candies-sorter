@@ -8,7 +8,7 @@ export interface Step {
 export enum SectionId {
   INTRO = 'intro',
   ASSEMBLY = 'assembly',
-  TRAINING = 'training',
   SOFTWARE = 'software',
-  TIPS = 'tips'
+  TRAINING = 'training',
+  INFERENCE = 'inference'
 }

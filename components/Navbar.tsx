@@ -5,16 +5,16 @@ const Navbar: React.FC = () => {
   const navItems = [
     { id: SectionId.INTRO, label: '1. Introduction', icon: 'fa-brain' },
     { id: SectionId.ASSEMBLY, label: '2. Assemblage', icon: 'fa-tools' },
-    { id: SectionId.TRAINING, label: '3. Entraînement', icon: 'fa-camera' },
-    { id: SectionId.SOFTWARE, label: '4. Code & P5.js', icon: 'fa-laptop-code' },
-    { id: SectionId.TIPS, label: '5. Astuces', icon: 'fa-lightbulb' },
+    { id: SectionId.SOFTWARE, label: '3. Programmation Arduino', icon: 'fa-microchip' },
+    { id: SectionId.TRAINING, label: '4. Entrainement', icon: 'fa-camera' },
+    { id: SectionId.INFERENCE, label: '5. Inference', icon: 'fa-magic' },
   ];
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      const navHeight = 80; // approximate navbar height
+      const navHeight = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - navHeight;
 

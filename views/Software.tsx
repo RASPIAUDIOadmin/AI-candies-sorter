@@ -6,7 +6,7 @@ const Software: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto">
       <SectionHeader 
-        title="Code & Connexion" 
+        title="Programmation Arduino" 
         subtitle="Faisons le lien entre le navigateur web et l'Arduino." 
       />
 

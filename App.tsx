@@ -2,9 +2,9 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Introduction from './views/Introduction';
 import Assembly from './views/Assembly';
-import Training from './views/Training';
 import Software from './views/Software';
-import Tips from './views/Tips';
+import Training from './views/Training';
+import Inference from './views/Inference';
 import { SectionId } from './types';
 
 const App: React.FC = () => {
@@ -17,7 +17,7 @@ const App: React.FC = () => {
             {/* Intro */}
             <section id={SectionId.INTRO} className="scroll-mt-24">
                <div className="flex items-center mb-8 justify-center">
-                  <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-sm">Étape 1</span>
+                  <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-sm">Etape 1</span>
                </div>
                <Introduction />
             </section>
@@ -25,33 +25,33 @@ const App: React.FC = () => {
             {/* Assembly */}
              <section id={SectionId.ASSEMBLY} className="scroll-mt-24 border-t border-slate-200 pt-16">
                 <div className="flex items-center mb-8 justify-center">
-                   <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-sm">Étape 2</span>
+                   <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-sm">Etape 2</span>
                 </div>
                 <Assembly />
             </section>
             
-            {/* Training */}
-             <section id={SectionId.TRAINING} className="scroll-mt-24 border-t border-slate-200 pt-16">
-                <div className="flex items-center mb-8 justify-center">
-                    <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-sm">Étape 3</span>
-                </div>
-                <Training />
-            </section>
-
-             {/* Software */}
+            {/* Software */}
              <section id={SectionId.SOFTWARE} className="scroll-mt-24 border-t border-slate-200 pt-16">
                 <div className="flex items-center mb-8 justify-center">
-                   <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-sm">Étape 4</span>
+                   <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-sm">Etape 3</span>
                 </div>
                 <Software />
             </section>
 
-             {/* Tips */}
-             <section id={SectionId.TIPS} className="scroll-mt-24 border-t border-slate-200 pt-16">
-                 <div className="flex items-center mb-8 justify-center">
-                   <span className="bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-sm">Bonus</span>
+            {/* Training */}
+             <section id={SectionId.TRAINING} className="scroll-mt-24 border-t border-slate-200 pt-16">
+                <div className="flex items-center mb-8 justify-center">
+                    <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-sm">Etape 4</span>
                 </div>
-                <Tips />
+                <Training />
+            </section>
+
+             {/* Inference */}
+             <section id={SectionId.INFERENCE} className="scroll-mt-24 border-t border-slate-200 pt-16">
+                 <div className="flex items-center mb-8 justify-center">
+                   <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-sm">Etape 5</span>
+                </div>
+                <Inference />
             </section>
         </div>
       </main>
@@ -59,7 +59,7 @@ const App: React.FC = () => {
       <footer className="bg-white border-t border-slate-200 py-8 mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-slate-500 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Atelier IA Tiny Sorter. Inspiré par Google Creative Lab.
+            &copy; {new Date().getFullYear()} Atelier IA Tiny Sorter. Inspire par Google Creative Lab.
           </div>
           <div className="flex space-x-6 text-slate-400">
             <a href="#" className="hover:text-slate-600 transition-colors"><i className="fab fa-github text-xl"></i></a>

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import SectionHeader from '../components/SectionHeader';
 import FlowDiagram from '../components/FlowDiagram';
-import inferenceVideo from '../photos/Inference.mp4';
 import photo1 from '../photos/photo-1.jpg';
 import photo2 from '../photos/photo-2.jpg';
 
@@ -16,6 +15,9 @@ const MediaPlaceholder: React.FC<{ type: 'video' | 'image'; filename: string }> 
 
 const Introduction: React.FC = () => {
   const [videoError, setVideoError] = useState(false);
+
+  const videoId = '4Id9SKHNyLM';
+  const youtubeEmbedUrl = `https://www.youtube.com/embed/${videoId}`;
 
   const photoGallery = [
     {
@@ -51,9 +53,8 @@ const Introduction: React.FC = () => {
         subtitle="Objectif : Comprendre comment fonctionne l'IA grace a un robot trieur de bonbons."
       />
 
-      {/* Section media : Video et Photos */}
       <div className="mb-12 space-y-8">
-        {/* Video Principale */}
+        {/* Video Principale - YouTube conserve */}
         <div className="relative w-full max-w-2xl mx-auto">
           <div className="bg-slate-900 rounded-2xl overflow-hidden shadow-xl border border-slate-200 aspect-video relative group">
             {!videoError ? (
@@ -61,28 +62,26 @@ const Introduction: React.FC = () => {
                 <div className="absolute top-4 left-4 z-10 pointer-events-none flex items-center gap-2">
                   <span className="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded shadow-sm animate-pulse">
                     <i className="fas fa-circle text-[8px] mr-1 align-middle"></i>
-                    Inference.mp4
+                    YouTube
                   </span>
-                  <span className="bg-slate-800/80 text-white text-[11px] px-2 py-1 rounded shadow-sm">Lecture locale</span>
+                  <span className="bg-slate-800/80 text-white text-[11px] px-2 py-1 rounded shadow-sm">Lien conserve</span>
                 </div>
-                <video
-                  className="w-full h-full object-cover bg-black"
-                  src={inferenceVideo}
-                  controls
-                  loop
-                  autoPlay
-                  muted
-                  playsInline
-                  preload="metadata"
+                <iframe
+                  className="w-full h-full object-contain bg-black"
+                  src={`${youtubeEmbedUrl}?rel=0&modestbranding=1`}
+                  title="Demonstration du robot trieur"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  loading="lazy"
                   onError={() => setVideoError(true)}
                 />
               </>
             ) : (
-              <MediaPlaceholder type="video" filename="photos/Inference.mp4" />
+              <MediaPlaceholder type="video" filename={youtubeEmbedUrl} />
             )}
           </div>
           <p className="text-center text-slate-500 text-sm italic mt-2">
-            Demonstration du robot en action (fichier Inference.mp4)
+            Demonstration du robot en action (YouTube)
           </p>
         </div>
 
