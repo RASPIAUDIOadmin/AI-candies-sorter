@@ -1,21 +1,24 @@
 import React from 'react';
 import SectionHeader from '../components/SectionHeader';
+import motor1 from '../photos/motor1.png';
+import motor2 from '../photos/motor2.png';
+import motor1and2 from '../photos/motor1and2.png';
 
 const Assembly: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto">
       <SectionHeader 
         title="Assemblage du Robot" 
-        subtitle="Préparez vos ciseaux, votre scotch et votre Arduino !" 
+        subtitle="Preparez vos ciseaux, votre scotch et votre Arduino !" 
       />
 
       {/* PDF Download Button */}
       <div className="mb-10 flex flex-col items-center justify-center text-center">
         <div className="bg-orange-50 border border-orange-200 rounded-2xl p-6 max-w-2xl w-full shadow-sm">
             <i className="fas fa-print text-4xl text-orange-500 mb-4"></i>
-            <h3 className="text-xl font-bold text-slate-800 mb-2">Gabarit à imprimer</h3>
+            <h3 className="text-xl font-bold text-slate-800 mb-2">Gabarit a imprimer</h3>
             <p className="text-slate-600 mb-6">
-                Pour construire le corps du robot, vous devez imprimer le patron sur du papier cartonné (de préférence).
+                Pour construire le corps du robot, vous devez imprimer le patron sur du papier cartonne (de preference).
             </p>
             <a
                 href="https://storage.googleapis.com/tiny-sorter/Tiny-Sorter-Print-Out.pdf"
@@ -25,8 +28,8 @@ const Assembly: React.FC = () => {
             >
                 <i className="fas fa-file-pdf text-2xl text-red-400"></i>
                 <div className="text-left">
-                    <div className="font-bold text-lg leading-tight">Télécharger le PDF</div>
-                    <div className="text-xs text-slate-400 font-normal">Format A4 - Imprimer à 100%</div>
+                    <div className="font-bold text-lg leading-tight">Telecharger le PDF</div>
+                    <div className="text-xs text-slate-400 font-normal">Format A4 - Imprimer a 100%</div>
                 </div>
                 <i className="fas fa-download ml-4"></i>
             </a>
@@ -38,14 +41,14 @@ const Assembly: React.FC = () => {
         {/* Instructions */}
         <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100">
           <div className="bg-slate-800 p-4 text-white flex items-center justify-between">
-             <h3 className="text-xl font-bold"><span className="bg-blue-500 text-white w-8 h-8 rounded-full inline-flex items-center justify-center mr-3 text-sm">1</span>L’Assemblage</h3>
+             <h3 className="text-xl font-bold"><span className="bg-blue-500 text-white w-8 h-8 rounded-full inline-flex items-center justify-center mr-3 text-sm">1</span>Assemblage</h3>
              <i className="fas fa-tools text-slate-400"></i>
           </div>
           <div className="p-8">
             <div className="mb-6 bg-blue-50 p-4 rounded-lg border border-blue-200">
                 <h4 className="font-bold text-blue-800 mb-2"><i className="fas fa-info-circle mr-2"></i>Note sur les Moteurs</h4>
                 <p className="text-blue-700 text-sm">
-                    Ce robot a été modifié pour avoir <strong>2 moteurs</strong> : un pour distribuer les bonbons et l'autre pour trier (gauche/droite) en fonction de la couleur.
+                    Ce robot a ete modifie pour avoir <strong>2 moteurs</strong> : un pour distribuer les bonbons et l'autre pour trier (gauche/droite) en fonction de la couleur.
                 </p>
             </div>
 
@@ -53,15 +56,15 @@ const Assembly: React.FC = () => {
                 <li className="flex items-start p-4 hover:bg-slate-50 rounded-lg transition-colors">
                     <div className="flex-shrink-0 w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold mr-4">1</div>
                     <div>
-                        <strong className="block text-slate-800 text-lg">Découpage</strong>
-                        <span className="text-slate-600">Découper le périmètre des deux figures (lignes pleines).</span>
+                        <strong className="block text-slate-800 text-lg">Decoupage</strong>
+                        <span className="text-slate-600">Decouper le perimetre des deux figures (lignes pleines).</span>
                     </div>
                 </li>
                 <li className="flex items-start p-4 hover:bg-slate-50 rounded-lg transition-colors">
                     <div className="flex-shrink-0 w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold mr-4">2</div>
                     <div>
                         <strong className="block text-slate-800 text-lg">Pliage</strong>
-                        <span className="text-slate-600">Plier les figures au niveau des pointillés. Utiliser une règle pour des plis nets.</span>
+                        <span className="text-slate-600">Plier les figures au niveau des pointilles. Utiliser une regle pour des plis nets.</span>
                     </div>
                 </li>
                 <li className="flex items-start p-4 hover:bg-slate-50 rounded-lg transition-colors">
@@ -81,8 +84,8 @@ const Assembly: React.FC = () => {
                 <li className="flex items-start p-4 hover:bg-slate-50 rounded-lg transition-colors">
                     <div className="flex-shrink-0 w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold mr-4">5</div>
                     <div className="w-full">
-                        <strong className="block text-slate-800 text-lg">Branchement Électrique</strong>
-                        <span className="text-slate-600 mb-4 block">Il y a 2 moteurs à brancher sur la carte Arduino. Assurez-vous de respecter les couleurs des câbles.</span>
+                        <strong className="block text-slate-800 text-lg">Branchement Electrique</strong>
+                        <span className="text-slate-600 mb-4 block">Il y a 2 moteurs a brancher sur la carte Arduino. Assurez-vous de respecter les couleurs des cables.</span>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {/* Moteur 1 */}
@@ -132,7 +135,29 @@ const Assembly: React.FC = () => {
                         
                         <div className="mt-4 p-3 bg-slate-100 rounded text-xs text-slate-500 italic">
                             <i className="fas fa-exclamation-triangle mr-1"></i>
-                            Si vous manquez de ports 5V ou GND sur l'Arduino, vous pouvez utiliser une breadboard (planche à pain) pour multiplier les connexions.
+                            Si vous manquez de ports 5V ou GND sur l'Arduino, vous pouvez utiliser une breadboard (planche a pain) pour multiplier les connexions.
+                        </div>
+
+                        <div className="mt-6">
+                          <h5 className="font-bold text-slate-800 mb-3 flex items-center gap-2">
+                            <i className="fas fa-plug text-slate-500"></i>
+                            Photos branchement moteurs
+                          </h5>
+                          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            {[
+                              { src: motor1, label: 'motor1.png', caption: 'Servo moteur 1 (Tri) - vue detaillee' },
+                              { src: motor2, label: 'motor2.png', caption: 'Servo moteur 2 (Distribution) - vue detaillee' },
+                              { src: motor1and2, label: 'motor1and2.png', caption: 'Les 2 moteurs branches ensemble' },
+                            ].map((item) => (
+                              <figure key={item.label} className="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm">
+                                <img src={item.src} alt={item.caption} className="w-full h-40 object-cover" loading="lazy" />
+                                <figcaption className="p-3">
+                                  <p className="text-sm font-semibold text-slate-800">{item.caption}</p>
+                                  <p className="text-[11px] text-slate-500 font-mono">{item.label}</p>
+                                </figcaption>
+                              </figure>
+                            ))}
+                          </div>
                         </div>
                     </div>
                 </li>
@@ -140,7 +165,7 @@ const Assembly: React.FC = () => {
                     <div className="flex-shrink-0 w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold mr-4">6</div>
                     <div>
                         <strong className="block text-slate-800 text-lg">Connexion USB</strong>
-                        <span className="text-slate-600">Brancher votre carte Arduino avec votre ordinateur via le câble USB.</span>
+                        <span className="text-slate-600">Brancher votre carte Arduino avec votre ordinateur via le cable USB.</span>
                     </div>
                 </li>
                 <li className="flex items-start p-4 hover:bg-slate-50 rounded-lg transition-colors">
