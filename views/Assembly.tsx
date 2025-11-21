@@ -78,14 +78,18 @@ const Assembly: React.FC = () => {
                     <div className="flex-shrink-0 w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold mr-4">4</div>
                     <div>
                         <strong className="block text-slate-800 text-lg">Installation des Moteurs</strong>
-                        <span className="text-slate-600 mb-2 block">Placer le premier servo moteur (Tri) dans votre figure au niveau de la <strong>lettre C</strong>. Installez le second moteur pour la distribution selon votre modification. Accrochez-les avec du scotch.</span>
+                        <span className="text-slate-600 mb-2 block">
+                          Place le servo de tri dans la figure au niveau de la <strong>lettre C</strong> et scotche-le. Accroche ensuite le deuxieme moteur sur le tube ou la gouttiere pour faire pivoter la tete du robot.
+                        </span>
                     </div>
                 </li>
                 <li className="flex items-start p-4 hover:bg-slate-50 rounded-lg transition-colors">
                     <div className="flex-shrink-0 w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold mr-4">5</div>
                     <div className="w-full">
                         <strong className="block text-slate-800 text-lg">Branchement Electrique</strong>
-                        <span className="text-slate-600 mb-4 block">Il y a 2 moteurs a brancher sur la carte Arduino. Assurez-vous de respecter les couleurs des cables.</span>
+                        <span className="text-slate-600 mb-4 block">
+                          Branche les 2 moteurs sur l'Arduino en respectant les couleurs : rouge sur +, noir sur GND, jaune sur le signal. Resume rapide : Moteur 1 (Tri) rouge 5V / noir GND / jaune D9. Moteur 2 rouge 3V3 / noir GND / jaune D9 ou D6 selon ta carte.
+                        </span>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {/* Moteur 1 */}
@@ -172,7 +176,9 @@ const Assembly: React.FC = () => {
                     <div className="flex-shrink-0 w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold mr-4">7</div>
                     <div>
                         <strong className="block text-slate-800 text-lg">Le Tube</strong>
-                        <span className="text-slate-600">Faire un tube en papier pour guider les bonbons vers le trieur.</span>
+                        <span className="text-slate-600 block">
+                          Faire un tube en papier (un peu plus large qu'un Smarties) et l'accrocher a la gouttiere de bonbons. Fixer le 2e moteur dessus, ajouter la tete du mini-robot a l'envers sur le moteur et, si besoin, coller un petit bout de papier a l'arriere pour empecher les bonbons de tomber quand c'est ferme.
+                        </span>
                     </div>
                 </li>
             </ul>

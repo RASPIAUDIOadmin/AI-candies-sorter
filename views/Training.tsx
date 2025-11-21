@@ -67,8 +67,8 @@ const Training: React.FC = () => {
                         <div className="flex items-center justify-between space-x-2 mb-1">
                             <div className="font-bold text-slate-900">Configuration des Classes</div>
                         </div>
-                        <div className="text-slate-600 text-sm">
-                            Ajoutez une classe pour en avoir 3 au total. Renommez-les exactement ainsi :
+            <div className="text-slate-600 text-sm">
+                            Ajoutez 1 classe pour en avoir <strong>3</strong> au total, puis renommez-les exactement ainsi :
                             <ul className="mt-2 space-y-1 font-mono bg-white p-2 rounded border">
                                 <li><span className="text-red-500">0</span> : Rien (Sans bonbon)</li>
                                 <li><span className="text-blue-500">1</span> : Couleur A (ex: Rouge)</li>
@@ -110,7 +110,7 @@ const Training: React.FC = () => {
                             <div className="font-bold text-slate-900">Entrainement</div>
                         </div>
                         <div className="text-slate-600 text-sm">
-                            Appuyez sur le bouton <strong>"Train Model"</strong>. Patientez pendant l'entrainement.
+                            Appuyez sur le bouton <strong>"Train Model"</strong> (ou "Training mode") et patientez pendant l'entrainement.
                         </div>
                     </div>
                 </div>

@@ -49,9 +49,28 @@ const Introduction: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto">
       <SectionHeader
-        title="Comprendre l'IA"
+        title="Tiny Sorter : Comprendre l'IA"
         subtitle="Objectif : Comprendre comment fonctionne l'IA grace a un robot trieur de bonbons."
       />
+
+      <div className="bg-white border border-slate-200 rounded-xl p-4 mb-8 shadow-sm">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div>
+            <h3 className="text-lg font-bold text-slate-800">Objectif</h3>
+            <p className="text-sm text-slate-600">
+              L'IA fonctionne grace a <strong>l'entrainement</strong> qui cree un <strong>modele</strong>, puis execute une <strong>inference</strong> (action) pour trier les bonbons.
+            </p>
+          </div>
+          <a
+            className="inline-flex items-center gap-2 bg-blue-600 text-white text-sm font-semibold px-3 py-2 rounded-lg shadow hover:bg-blue-700 transition-colors"
+            href="https://teachablemachine.withgoogle.com/train/image"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Ouvrir Teachable Machine <i className="fas fa-external-link-alt text-xs"></i>
+          </a>
+        </div>
+      </div>
 
       <div className="mb-12 space-y-8">
         {/* Video Principale - YouTube conserve */}
@@ -126,27 +145,25 @@ const Introduction: React.FC = () => {
       <div className="bg-white rounded-2xl shadow-sm p-8 mb-8 border border-slate-100">
         <h3 className="text-2xl font-bold text-slate-800 mb-4">Comment ca marche ?</h3>
         <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-          L'IA fonctionne grace a <strong>l'entrainement</strong> qui cree un <strong>modele</strong>, ce qui permet ensuite de faire une <strong>inference</strong> (une action).
+          L'IA fonctionne grace a <strong>l'entrainement</strong> qui cree un <strong>modele</strong> puis permet de faire une <strong>inference</strong> (une action de tri).
         </p>
 
         <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 mb-8">
-          <h4 className="font-bold text-slate-700 mb-4 text-center uppercase tracking-wider text-sm">Schema de fonctionnement</h4>
+          <h4 className="font-bold text-slate-700 mb-4 text-center uppercase tracking-wider text-sm">Schema</h4>
           <FlowDiagram />
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
-            <h4 className="font-bold text-red-700 text-lg mb-2"><i className="fas fa-times-circle mr-2"></i>Mauvais Entrainement</h4>
+            <h4 className="font-bold text-red-700 text-lg mb-2"><i className="fas fa-times-circle mr-2"></i>Mauvais entrainement</h4>
             <p className="text-slate-700">
-              Si l'entrainement n'est pas de bonne qualite, cela se sentira sur le modele qui aura des erreurs.
-              Cela donnera une <strong>mauvaise inference</strong>. A l'evaluation finale, il aura donc une <strong>note mediocre</strong>.
+              Si l'entrainement est de mauvaise qualite, le modele fait des erreurs et produit une <strong>mauvaise inference</strong> : la note finale sera mediocre.
             </p>
           </div>
           <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
-            <h4 className="font-bold text-green-700 text-lg mb-2"><i className="fas fa-check-circle mr-2"></i>Bon Entrainement</h4>
+            <h4 className="font-bold text-green-700 text-lg mb-2"><i className="fas fa-check-circle mr-2"></i>Bon entrainement</h4>
             <p className="text-slate-700">
-              Si l'entrainement est de bonne qualite, cela se sentira sur le modele avec aucune faute.
-              Cela fera une <strong>inference parfaite</strong>. L'evaluation sera de <strong>bonne qualite</strong>.
+              Un entrainement soigne donne un <strong>modele fiable</strong> et une <strong>inference parfaite</strong> : l'evaluation sera de bonne qualite.
             </p>
           </div>
         </div>

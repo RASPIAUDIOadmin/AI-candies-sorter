@@ -88,6 +88,15 @@ const Software: React.FC = () => {
         </div>
       </div>
 
+      <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8">
+        <h4 className="text-lg font-bold text-slate-800 mb-3">Connecter le mini robot au navigateur</h4>
+        <ol className="list-decimal list-inside text-slate-700 space-y-2">
+          <li>Brancher l'Arduino en USB et ouvrir le sketch P5.js fourni.</li>
+          <li>Remplacer l'URL du modele par celle exportee depuis Teachable Machine.</li>
+          <li>Lancer le sketch, autoriser la webcam et verifier que les predictions controlent les moteurs.</li>
+        </ol>
+      </div>
+
       <div className="bg-slate-800 text-white p-6 rounded-xl">
          <h4 className="font-bold text-lg mb-2"><i className="fas fa-sync-alt mr-2 animate-spin-slow"></i>Flux de donnees</h4>
          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 text-center text-sm">
