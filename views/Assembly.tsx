@@ -3,6 +3,7 @@ import SectionHeader from '../components/SectionHeader';
 import motor1 from '../photos/motor1.png';
 import motor2 from '../photos/motor2.png';
 import motor1and2 from '../photos/motor1and2.png';
+import pdfTemplate from '../candy_sorter_cuting_template.pdf';
 
 const Assembly: React.FC = () => {
   return (
@@ -21,7 +22,7 @@ const Assembly: React.FC = () => {
                 Pour construire le corps du robot, imprime le patron sur du papier cartonne (de preference).
             </p>
             <a
-                href="./candy_sorter_cuting_template.pdf"
+                href={pdfTemplate}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-3 bg-slate-800 text-white px-8 py-4 rounded-xl hover:bg-slate-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"

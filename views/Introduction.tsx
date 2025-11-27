@@ -56,19 +56,11 @@ const Introduction: React.FC = () => {
               L'IA fonctionne grace a <strong>l'entrainement</strong> qui cree un <strong>modele</strong>, puis execute une <strong>inference</strong> (action) pour trier les bonbons.
             </p>
           </div>
-          <a
-            className="inline-flex items-center gap-2 bg-blue-600 text-white text-sm font-semibold px-3 py-2 rounded-lg shadow hover:bg-blue-700 transition-colors"
-            href="https://teachablemachine.withgoogle.com/train/image"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Ouvrir Teachable Machine <i className="fas fa-external-link-alt text-xs"></i>
-          </a>
         </div>
       </div>
 
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-8">
-        <h4 className="text-base font-bold text-blue-800 mb-2">L'IA en 3 idees (version ado)</h4>
+        <h4 className="text-base font-bold text-blue-800 mb-2">L'IA en 3 idees</h4>
         <ul className="text-sm text-blue-900 space-y-1 list-disc list-inside">
           <li>Tu filmes plusieurs exemples (bonbon A, bonbon B, rien) : c'est l'entrainement.</li>
           <li>L'ordi memorise les differents aspects (couleurs, formes) et fabrique un modele.</li>
@@ -84,6 +76,69 @@ const Introduction: React.FC = () => {
           il compare avec ce qu'il a appris et choisit la bonne action (inference). Plus tes exemples sont varies et propres,
           plus le tri est fiable.
         </p>
+      </div>
+
+      <div className="bg-white border border-slate-200 rounded-xl p-5 mb-10 space-y-3">
+        <h3 className="text-lg font-bold text-slate-800">Volet pedagogique : Comprendre l’IA avec le Tiny Sorter</h3>
+        <p className="text-sm text-slate-700">Objectif : Comprendre les notions d’entrainement, de modele, d’inference et d’apprentissage supervise a partir du robot trieur de bonbons.</p>
+        <div className="space-y-2">
+          <h4 className="font-semibold text-slate-800">Sequence d’activite</h4>
+          <ul className="list-disc list-inside text-sm text-slate-700 space-y-1">
+            <li>Observation : la camera filme, l’ordi decide “gauche / droite / rien”, les moteurs bougent.</li>
+            <li>Question : “A quel moment l’IA decide ? Que voit-elle vraiment ?”</li>
+          </ul>
+        </div>
+        <div className="space-y-1">
+          <h4 className="font-semibold text-slate-800">Vocabulaire</h4>
+          <ul className="list-disc list-inside text-sm text-slate-700 space-y-1">
+            <li><strong>Donnees</strong> : photos de bonbons et de fond vide.</li>
+            <li><strong>Labels</strong> : “Rien”, “Couleur A”, “Couleur B”.</li>
+            <li><strong>Entrainement</strong> : on montre des exemples avec la bonne reponse.</li>
+            <li><strong>Modele</strong> : le “cerveau” numerique cree pendant l’entrainement.</li>
+            <li><strong>Inference</strong> : decision sur une nouvelle image.</li>
+            <li><strong>Apprentissage supervise</strong> : on donne exemple + bonne reponse (Teachable Machine).</li>
+          </ul>
+        </div>
+        <div className="space-y-1">
+          <h4 className="font-semibold text-slate-800">Entrainement (Teachable Machine)</h4>
+          <ul className="list-disc list-inside text-sm text-slate-700 space-y-1">
+            <li>Classe 0 : fond vide.</li>
+            <li>Classe 1 : bonbon Couleur A.</li>
+            <li>Classe 2 : bonbon Couleur B.</li>
+            <li>Exemples varies (positions, lumiere) = modele plus fiable.</li>
+            <li>Lancer “Train Model” : l’ordi ajuste ses parametres pour se tromper moins.</li>
+          </ul>
+        </div>
+        <div className="space-y-1">
+          <h4 className="font-semibold text-slate-800">Tester et parler d’erreurs</h4>
+          <ul className="list-disc list-inside text-sm text-slate-700 space-y-1">
+            <li>Tester avec des positions “surprise”.</li>
+            <li>Question : “Erreur du robot ou des donnees d’entrainement ?”</li>
+            <li>Sur-apprentissage : trop repetitif = apprend par coeur, generalise mal.</li>
+          </ul>
+        </div>
+        <div className="space-y-1">
+          <h4 className="font-semibold text-slate-800">Relier au monde reel</h4>
+          <ul className="list-disc list-inside text-sm text-slate-700 space-y-1">
+            <li>Reco videos/musique, visages/photos, tri de spam.</li>
+            <li>Toujours : donnees → entrainement → modele → inference.</li>
+          </ul>
+        </div>
+        <div className="space-y-1">
+          <h4 className="font-semibold text-slate-800">Resume</h4>
+          <p className="text-sm text-slate-700">Ce n’est pas de la magie : un modele mathématique entraîne sur beaucoup d’exemples. Bonnes donnees = bonnes decisions, mauvaises donnees = erreurs.</p>
+        </div>
+        <div className="space-y-1">
+          <h4 className="font-semibold text-slate-800">Pour aller plus loin : c’est quoi un transformeur ?</h4>
+          <ul className="list-disc list-inside text-sm text-slate-700 space-y-1">
+            <li>Travaille sur des sequences (texte, son...).</li>
+            <li>Utilise l’“attention” pour relier les elements importants.</li>
+            <li>Apprend a predire la suite la plus probable a partir de beaucoup de donnees.</li>
+          </ul>
+          <p className="text-sm text-slate-700">
+            Dans Tiny Sorter, on voit la meme logique en version reduite : collecter des donnees, entrainer un modele, puis faire des inférences. La difference avec les grosses IA est surtout l’echelle.
+          </p>
+        </div>
       </div>
 
       <div className="mb-12 space-y-8">
@@ -183,6 +238,19 @@ const Introduction: React.FC = () => {
         <a href="https://experiments.withgoogle.com/tiny-sorter/view/" target="_blank" rel="noreferrer" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
           Inspire du projet Google Tiny Sorter <i className="fas fa-external-link-alt ml-2 text-sm"></i>
         </a>
+      </div>
+
+      <div className="mt-10 bg-white border border-slate-200 rounded-xl p-6 shadow-sm space-y-2">
+        <h4 className="text-base font-bold text-slate-800">Atelier « Tiny Sorter : Comprendre l’IA » cree par RaspiAudio.com</h4>
+        <p className="text-sm text-slate-700">
+          RaspiAudio est une societe francaise qui conçoit des cartes audio et des objets interactifs a base d’ESP32 et de Raspberry Pi.
+        </p>
+        <p className="text-sm text-slate-700">
+          Elle developpe des kits et ateliers melant electronique, IA et creativite pour les makers, les ecoles et les artistes.
+        </p>
+        <p className="text-sm text-slate-700">
+          Plus d’informations sur le site : <a className="text-blue-600 hover:underline" href="https://raspiaudio.com/" target="_blank" rel="noreferrer">https://raspiaudio.com</a>
+        </p>
       </div>
     </div>
   );
