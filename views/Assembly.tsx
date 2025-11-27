@@ -26,7 +26,7 @@ const Assembly: React.FC = () => {
             Pour construire le corps du robot, imprime le patron sur du papier cartonne (de preference).
           </p>
           <a
-            href={pdfTemplate}
+            href="https://github.com/RASPIAUDIOadmin/AI-candies-sorter/blob/e2332909b46129247f8d1e8fd5c8ac17c1bb40a5/doc/candy_sorter_cuting_template.pdf"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-3 bg-slate-800 text-white px-8 py-4 rounded-xl hover:bg-slate-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
