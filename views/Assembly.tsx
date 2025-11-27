@@ -194,6 +194,7 @@ const Assembly: React.FC = () => {
             </div>
           </div>
         </div>
+        </details>
 
       </div>
     </div>
