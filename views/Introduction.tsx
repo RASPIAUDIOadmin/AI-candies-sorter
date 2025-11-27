@@ -33,6 +33,37 @@ const Introduction: React.FC = () => {
         subtitle="Objectif : Comprendre comment fonctionne l'IA grace a un robot trieur de bonbons."
       />
 
+      {/* Video principale */}
+      <div className="relative w-full max-w-2xl mx-auto mb-10">
+        <div className="bg-slate-900 rounded-2xl overflow-hidden shadow-xl border border-slate-200 aspect-video relative group">
+          {!videoError ? (
+            <>
+              <div className="absolute top-4 left-4 z-10 pointer-events-none flex items-center gap-2">
+                <span className="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded shadow-sm animate-pulse">
+                  <i className="fas fa-circle text-[8px] mr-1 align-middle"></i>
+                  YouTube
+                </span>
+                <span className="bg-slate-800/80 text-white text-[11px] px-2 py-1 rounded shadow-sm">Lien conserve</span>
+              </div>
+              <iframe
+                className="w-full h-full object-contain bg-black"
+                src={`${youtubeEmbedUrl}?rel=0&modestbranding=1`}
+                title="Demonstration du robot trieur"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+                onError={() => setVideoError(true)}
+              />
+            </>
+          ) : (
+            <MediaPlaceholder type="video" filename={youtubeEmbedUrl} />
+          )}
+        </div>
+        <p className="text-center text-slate-500 text-sm italic mt-2">
+          Demonstration du robot en action (YouTube)
+        </p>
+      </div>
+
       <div className="bg-white border border-slate-200 rounded-xl p-4 mb-6 shadow-sm">
         <h3 className="text-lg font-bold text-slate-800 mb-1">Objectif</h3>
         <p className="text-sm text-slate-600">
@@ -49,7 +80,7 @@ const Introduction: React.FC = () => {
         </ul>
       </div>
 
-      <details className="bg-white border border-slate-200 rounded-xl p-5 mb-6 space-y-3" open>
+      <details className="bg-white border border-slate-200 rounded-xl p-5 mb-6 space-y-3" open={false}>
         <summary className="text-lg font-bold text-slate-800 cursor-pointer">Contenu pedagogique</summary>
         <p className="text-sm text-slate-700">
           Une IA n'est pas de la magie : elle apprend sur des exemples. Bonnes donnees = bonnes decisions, mauvaises donnees = erreurs.
@@ -109,38 +140,6 @@ const Introduction: React.FC = () => {
           </p>
         </div>
       </details>
-
-      {/* Video principale */}
-      <div className="relative w-full max-w-2xl mx-auto mb-10">
-        <div className="bg-slate-900 rounded-2xl overflow-hidden shadow-xl border border-slate-200 aspect-video relative group">
-          {!videoError ? (
-            <>
-              <div className="absolute top-4 left-4 z-10 pointer-events-none flex items-center gap-2">
-                <span className="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded shadow-sm animate-pulse">
-                  <i className="fas fa-circle text-[8px] mr-1 align-middle"></i>
-                  YouTube
-                </span>
-                <span className="bg-slate-800/80 text-white text-[11px] px-2 py-1 rounded shadow-sm">Lien conserve</span>
-              </div>
-              <iframe
-                className="w-full h-full object-contain bg-black"
-                src={`${youtubeEmbedUrl}?rel=0&modestbranding=1`}
-                title="Demonstration du robot trieur"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                loading="lazy"
-                onError={() => setVideoError(true)}
-              />
-            </>
-          ) : (
-            <MediaPlaceholder type="video" filename={youtubeEmbedUrl} />
-          )}
-        </div>
-        <p className="text-center text-slate-500 text-sm italic mt-2">
-          Demonstration du robot en action (YouTube)
-        </p>
-      </div>
-
       {/* Galerie Photos collapsable */}
       <details className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm mb-8" open>
         <summary className="text-lg font-bold text-slate-700 mb-2 cursor-pointer flex items-center gap-2">
@@ -207,19 +206,6 @@ const Introduction: React.FC = () => {
         <a href="https://experiments.withgoogle.com/tiny-sorter/view/" target="_blank" rel="noreferrer" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
           Inspire du projet Google Tiny Sorter <i className="fas fa-external-link-alt ml-2 text-sm"></i>
         </a>
-      </div>
-
-      <div className="mt-10 bg-white border border-slate-200 rounded-xl p-6 shadow-sm space-y-2">
-        <h4 className="text-base font-bold text-slate-800">Atelier « Tiny Sorter : Comprendre l'IA » cree par RaspiAudio.com</h4>
-        <p className="text-sm text-slate-700">
-          RaspiAudio est une societe francaise qui conçoit des cartes audio et des objets interactifs a base d’ESP32 et de Raspberry Pi.
-        </p>
-        <p className="text-sm text-slate-700">
-          Elle developpe des kits et ateliers melant electronique, IA et creativite pour les makers, les ecoles et les artistes.
-        </p>
-        <p className="text-sm text-slate-700">
-          Plus d’informations sur le site : <a className="text-blue-600 hover:underline" href="https://raspiaudio.com/" target="_blank" rel="noreferrer">https://raspiaudio.com</a>
-        </p>
       </div>
 
       <div className="mt-6 bg-white border border-slate-200 rounded-xl p-6 shadow-sm space-y-3 text-center">
