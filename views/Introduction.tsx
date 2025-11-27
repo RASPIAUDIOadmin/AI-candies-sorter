@@ -221,6 +221,21 @@ const Introduction: React.FC = () => {
           Plus d’informations sur le site : <a className="text-blue-600 hover:underline" href="https://raspiaudio.com/" target="_blank" rel="noreferrer">https://raspiaudio.com</a>
         </p>
       </div>
+
+      <div className="mt-6 bg-white border border-slate-200 rounded-xl p-6 shadow-sm space-y-3 text-center">
+        <h4 className="text-base font-bold text-slate-800">Atelier programme a la demande du FabLab VilletteMakerz</h4>
+        <p className="text-sm text-slate-700">
+          Realise par <a className="text-blue-600 hover:underline" href="https://raspiaudio.com/" target="_blank" rel="noreferrer">RASPIAUDIO.COM</a> pour le FabLab <a className="text-blue-600 hover:underline" href="https://villettemakerz.com/" target="_blank" rel="noreferrer">VilletteMakerz</a>.
+        </p>
+        <div className="flex justify-center">
+          <img
+            src="photos/logo_villettemakerz.png"
+            alt="Logo VilletteMakerz"
+            className="h-14 object-contain"
+            loading="lazy"
+          />
+        </div>
+      </div>
     </div>
   );
 };
