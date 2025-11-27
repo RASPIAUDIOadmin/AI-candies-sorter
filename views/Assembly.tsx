@@ -3,7 +3,6 @@ import SectionHeader from '../components/SectionHeader';
 import motor1 from '../photos/motor1.png';
 import motor2 from '../photos/motor2.png';
 import motor1and2 from '../photos/motor1and2.png';
-import pdfTemplate from '../doc/candy_sorter_cuting_template.pdf';
 
 const Assembly: React.FC = () => {
   return (
