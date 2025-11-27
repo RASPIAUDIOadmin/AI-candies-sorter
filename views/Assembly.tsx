@@ -3,7 +3,7 @@ import SectionHeader from '../components/SectionHeader';
 import motor1 from '../photos/motor1.png';
 import motor2 from '../photos/motor2.png';
 import motor1and2 from '../photos/motor1and2.png';
-import pdfTemplate from '../candy_sorter_cuting_template.pdf';
+import pdfTemplate from '../doc/candy_sorter_cuting_template.pdf';
 
 const Assembly: React.FC = () => {
   return (
@@ -13,8 +13,12 @@ const Assembly: React.FC = () => {
         subtitle="Preparez vos ciseaux, votre scotch et votre Arduino !" 
       />
 
-      {/* PDF Download Button */}
-      <div className="mb-10 flex flex-col items-center justify-center text-center">
+      <details className="mb-10 flex flex-col items-center justify-center text-center" open>
+        <summary className="cursor-pointer text-sm font-semibold text-slate-700 mb-3">
+          <span className="inline-flex items-center gap-2 bg-orange-100 text-orange-800 px-3 py-2 rounded-lg">
+            <i className="fas fa-file-pdf"></i> Gabarit a imprimer (PDF)
+          </span>
+        </summary>
         <div className="bg-orange-50 border border-orange-200 rounded-2xl p-6 max-w-2xl w-full shadow-sm">
             <i className="fas fa-print text-4xl text-orange-500 mb-4"></i>
             <h3 className="text-xl font-bold text-slate-800 mb-2">Gabarit a imprimer</h3>
@@ -35,16 +39,16 @@ const Assembly: React.FC = () => {
                 <i className="fas fa-download ml-4"></i>
             </a>
         </div>
-      </div>
+      </details>
 
       <div className="space-y-12">
         
         {/* Instructions */}
-        <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100">
-          <div className="bg-slate-800 p-4 text-white flex items-center justify-between">
+        <details className="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100" open>
+          <summary className="bg-slate-800 p-4 text-white flex items-center justify-between cursor-pointer">
              <h3 className="text-xl font-bold"><span className="bg-blue-500 text-white w-8 h-8 rounded-full inline-flex items-center justify-center mr-3 text-sm">1</span>Assemblage</h3>
              <i className="fas fa-tools text-slate-400"></i>
-          </div>
+          </summary>
           <div className="p-8">
             <div className="mb-6 bg-blue-50 p-4 rounded-lg border border-blue-200">
                 <h4 className="font-bold text-blue-800 mb-2"><i className="fas fa-info-circle mr-2"></i>Note sur les Moteurs</h4>

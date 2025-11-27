@@ -10,7 +10,10 @@ const Training: React.FC = () => {
         subtitle="Apprenons a notre robot a voir les couleurs avec Google Teachable Machine." 
       />
 
-      <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-6">
+      <details className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-6" open>
+        <summary className="cursor-pointer text-sm font-semibold text-slate-700 mb-3 flex items-center gap-2">
+          <i className="fas fa-video"></i> Apercu video de l'entrainement
+        </summary>
         <div className="flex flex-col md:flex-row gap-6 items-start">
           <div className="md:w-5/12 space-y-2">
             <span className="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">training.mp4</span>
@@ -34,9 +37,13 @@ const Training: React.FC = () => {
             <p className="text-[11px] text-slate-500 mt-2">Fichier: photos/training.mp4</p>
           </div>
         </div>
-      </div>
+      </details>
 
-      <div className="grid gap-6">
+      <details className="bg-white p-0 rounded-2xl shadow-sm border border-slate-100" open>
+        <summary className="cursor-pointer text-sm font-semibold text-slate-700 mb-3 px-4 py-3 flex items-center gap-2">
+          <i className="fas fa-brain"></i> Lancer et regler l'entrainement
+        </summary>
+      <div className="grid gap-6 px-4 pb-6">
         
         <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 text-white shadow-lg flex flex-col md:flex-row items-center justify-between">
             <div>
@@ -138,6 +145,7 @@ const Training: React.FC = () => {
             </div>
         </div>
       </div>
+      </details>
     </div>
   );
 };

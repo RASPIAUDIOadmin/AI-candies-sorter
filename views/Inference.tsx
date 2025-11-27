@@ -10,14 +10,17 @@ const Inference: React.FC = () => {
         subtitle="Voir le robot prendre des decisions a partir du modele entraine." 
       />
 
-      <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+      <details className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200" open>
+        <summary className="cursor-pointer text-sm font-semibold text-slate-700 mb-3 flex items-center gap-2">
+          <i className="fas fa-magic"></i> Voir l'inference en action
+        </summary>
         <div className="flex flex-col md:flex-row gap-6 items-start">
           <div className="md:w-5/12 space-y-2">
             <span className="bg-purple-100 text-purple-700 text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">Inference.mp4</span>
-            <h3 className="text-xl font-bold text-slate-800">Démonstration locale</h3>
+            <h3 className="text-xl font-bold text-slate-800">Demonstration locale</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Lecture du tri en temps réel depuis <code className="bg-slate-100 px-1 rounded">photos/Inference.mp4</code>. 
-              Le bras bouge selon la classe prédite par le modèle.
+              Lecture du tri en temps reel depuis <code className="bg-slate-100 px-1 rounded">photos/Inference.mp4</code>. 
+              Le bras bouge selon la classe predite par le modele.
             </p>
           </div>
           <div className="md:flex-1 w-full">
@@ -35,7 +38,7 @@ const Inference: React.FC = () => {
             <p className="text-[11px] text-slate-500 mt-2">Fichier: photos/Inference.mp4</p>
           </div>
         </div>
-      </div>
+      </details>
     </div>
   );
 };

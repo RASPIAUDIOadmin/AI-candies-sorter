@@ -10,7 +10,11 @@ const Software: React.FC = () => {
         subtitle="Faisons le lien entre le navigateur web et l'Arduino." 
       />
 
-      <div className="grid md:grid-cols-2 gap-6 mb-8">
+      <details className="mb-8" open>
+        <summary className="cursor-pointer text-sm font-semibold text-slate-700 mb-3 bg-white border border-slate-200 rounded-lg px-3 py-2 inline-flex items-center gap-2 shadow-sm">
+          <i className="fas fa-laptop-code text-slate-500"></i> Ouvrir / fermer la programmation Arduino
+        </summary>
+      <div className="grid md:grid-cols-2 gap-6">
         {/* Arduino Card */}
         <div className="bg-white p-6 rounded-2xl shadow-sm border-l-8 border-teal-500 flex flex-col">
             <div className="flex items-center mb-4">
@@ -61,8 +65,12 @@ const Software: React.FC = () => {
             </a>
         </div>
       </div>
+      </details>
 
-      <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8">
+      <details className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8" open>
+        <summary className="cursor-pointer text-sm font-semibold text-slate-700 mb-3 flex items-center gap-2">
+          <i className="fas fa-video"></i> Connexion Arduino en video
+        </summary>
         <div className="flex flex-col md:flex-row gap-6 items-start">
           <div className="md:w-5/12 space-y-2">
             <span className="bg-emerald-100 text-emerald-700 text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">Arduino.mp4</span>
@@ -86,16 +94,19 @@ const Software: React.FC = () => {
             <p className="text-[11px] text-slate-500 mt-2">Fichier: photos/Arduino.mp4</p>
           </div>
         </div>
-      </div>
+      </details>
 
-      <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8">
+      <details className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8" open>
+        <summary className="cursor-pointer text-sm font-semibold text-slate-700 mb-3 flex items-center gap-2">
+          <i className="fas fa-browser"></i> Connecter le mini robot au navigateur
+        </summary>
         <h4 className="text-lg font-bold text-slate-800 mb-3">Connecter le mini robot au navigateur</h4>
         <ol className="list-decimal list-inside text-slate-700 space-y-2">
           <li>Brancher l'Arduino en USB et ouvrir le sketch P5.js fourni.</li>
           <li>Remplacer l'URL du modele par celle exportee depuis Teachable Machine.</li>
           <li>Lancer le sketch, autoriser la webcam et verifier que les predictions controlent les moteurs.</li>
         </ol>
-      </div>
+      </details>
 
       <div className="bg-slate-800 text-white p-6 rounded-xl">
          <h4 className="font-bold text-lg mb-2"><i className="fas fa-sync-alt mr-2 animate-spin-slow"></i>Flux de donnees</h4>
