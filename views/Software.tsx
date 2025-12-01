@@ -40,30 +40,6 @@ const Software: React.FC = () => {
             </a>
         </div>
 
-        {/* P5.js Card */}
-        <div className="bg-white p-6 rounded-2xl shadow-sm border-l-8 border-pink-500 flex flex-col">
-            <div className="flex items-center mb-4">
-                <div className="bg-pink-100 p-3 rounded-full mr-4">
-                     <i className="fas fa-code text-pink-600 text-2xl"></i>
-                </div>
-                <h3 className="text-xl font-bold text-slate-800">2. P5.js</h3>
-            </div>
-            <p className="text-slate-600 mb-6 flex-grow">
-                C'est le cerveau logiciel ! Ce script fait le lien entre la camera (IA) et l'Arduino.
-            </p>
-            <div className="bg-slate-50 p-3 rounded border mb-4 text-sm">
-                <i className="fas fa-exclamation-circle text-pink-500 mr-2"></i>
-                Remplacez l'URL du modele dans le code par la votre !
-            </div>
-            <a 
-                href="https://editor.p5js.org/olivier.ros/sketches/S0Hg4Jlt2" 
-                target="_blank" 
-                rel="noreferrer"
-                className="w-full block text-center bg-pink-600 text-white py-2 rounded-lg hover:bg-pink-700 transition-colors font-medium"
-            >
-                Acceder au code P5.js <i className="fas fa-external-link-alt ml-2"></i>
-            </a>
-        </div>
       </div>
       </details>
 

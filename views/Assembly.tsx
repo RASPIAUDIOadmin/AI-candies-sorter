@@ -106,8 +106,8 @@ const Assembly: React.FC = () => {
                       </div>
                       <div className="space-y-2 text-sm">
                         <div className="flex items-center justify-between bg-red-50 p-2 rounded">
-                          <span className="text-red-700 font-medium"><i className="fas fa-bolt mr-2"></i>Rouge</span>
-                          <span className="font-bold text-slate-700">3V3</span>
+                        <span className="text-red-700 font-medium"><i className="fas fa-bolt mr-2"></i>Rouge</span>
+                        <span className="font-bold text-slate-700">5V</span>
                         </div>
                         <div className="flex items-center justify-between bg-slate-100 p-2 rounded">
                           <span className="text-slate-600 font-medium"><i className="fas fa-ground mr-2"></i>Noir</span>
@@ -143,9 +143,15 @@ const Assembly: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="mt-4 p-3 bg-slate-100 rounded text-xs text-slate-500 italic">
-                    <i className="fas fa-exclamation-triangle mr-1"></i>
-                    Si vous manquez de ports 5V ou GND sur l'Arduino, vous pouvez utiliser une breadboard (planche a pain) pour multiplier les connexions.
+                        <div className="mt-4 p-3 bg-slate-100 rounded text-xs text-slate-500 italic">
+                            <i className="fas fa-exclamation-triangle mr-1"></i>
+                            Si vous manquez de ports 5V ou GND sur l'Arduino, vous pouvez utiliser une breadboard (planche a pain) pour multiplier les connexions.
+                        </div>
+
+                  <div className="mt-3 text-xs bg-slate-50 border border-slate-200 rounded p-3 text-slate-700">
+                    Comme il n'y a qu'un seul 5V sur l'Arduino Nano, prevois une breadboard pour dedoubler le +5V :
+                    <br/>Arduino 5V → breadboard → Moteur 1 rouge
+                    <br/>                           → Moteur 2 rouge
                   </div>
 
                   <div className="mt-6">

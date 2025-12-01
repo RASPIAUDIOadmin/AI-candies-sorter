@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionHeader from '../components/SectionHeader';
 import inferenceVideo from '../photos/Inference.mp4';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const Inference: React.FC = () => {
   return (
@@ -38,6 +39,24 @@ const Inference: React.FC = () => {
             <p className="text-[11px] text-slate-500 mt-2">Fichier: photos/Inference.mp4</p>
           </div>
         </div>
+      </details>
+
+      <details className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mt-6" open>
+        <summary className="cursor-pointer text-sm font-semibold text-slate-700 mb-3 flex items-center gap-2">
+          <i className="fas fa-code"></i> P5.js (logique d'inference)
+        </summary>
+        <p className="text-slate-600 mb-4">
+          P5.js est le script qui fait le lien entre la webcam (modele Teachable Machine) et l'Arduino pour bouger les moteurs.
+          Remplace l'URL du modele par la tienne avant de lancer le sketch.
+        </p>
+        <a 
+          href="https://editor.p5js.org/olivier.ros/sketches/S0Hg4Jlt2" 
+          target="_blank" 
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition-colors font-medium"
+        >
+          Acceder au code P5.js <FaExternalLinkAlt className="text-xs" />
+        </a>
       </details>
     </div>
   );
