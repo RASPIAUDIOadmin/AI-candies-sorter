@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import SectionHeader from '../components/SectionHeader';
 import FlowDiagram from '../components/FlowDiagram';
 import photo1 from '../photos/photo-1.jpg';
-import photo2 from '../photos/photo-2.jpg';
 import robotHead from '../photos/robot headwith eyes.png';
 import motor1 from '../photos/motor1.png';
 import motor2 from '../photos/motor2.png';
@@ -33,7 +32,6 @@ const Introduction: React.FC = () => {
 
   const photoGallery = [
     { title: 'Photo 1', filename: 'photo-1.jpg', description: 'Vue rapprochee du robot en train de trier.', src: photo1 },
-    { title: 'Photo 2', filename: 'photo-2.jpg', description: 'Seconde photo du montage et de la rampe.', src: photo2 },
     { title: 'Tete du robot (avec yeux)', filename: 'robot headwith eyes.png', description: 'Les yeux mobiles sont fortement conseilles !', src: robotHead },
     { title: 'Cablage moteur 1', filename: 'motor1.png', description: 'Servo Tri branche sur Arduino', src: motor1 },
     { title: 'Cablage moteur 2', filename: 'motor2.png', description: 'Servo Distribution branche sur Arduino', src: motor2 },
