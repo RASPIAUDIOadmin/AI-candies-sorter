@@ -7,6 +7,14 @@ import robotHead from '../photos/robot headwith eyes.png';
 import motor1 from '../photos/motor1.png';
 import motor2 from '../photos/motor2.png';
 import motor1and2 from '../photos/motor1and2.png';
+import p0 from '../photos/0.jpg';
+import p1 from '../photos/1.jpg';
+import p2 from '../photos/2.jpg';
+import p3 from '../photos/3.jpg';
+import p4 from '../photos/4.jpg';
+import p5 from '../photos/5.jpg';
+import p6 from '../photos/6.jpg';
+import p7 from '../photos/7.jpg';
 
 const MediaPlaceholder: React.FC<{ type: 'video'; filename: string }> = ({ type, filename }) => (
   <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-100 border-2 border-dashed border-slate-300 text-slate-400 p-4 text-center">
@@ -30,6 +38,14 @@ const Introduction: React.FC = () => {
     { title: 'Cablage moteur 1', filename: 'motor1.png', description: 'Servo Tri branche sur Arduino', src: motor1 },
     { title: 'Cablage moteur 2', filename: 'motor2.png', description: 'Servo Distribution branche sur Arduino', src: motor2 },
     { title: 'Les 2 moteurs', filename: 'motor1and2.png', description: 'Vue d’ensemble des deux servos branches', src: motor1and2 },
+    { title: 'Atelier 0', filename: '0.jpg', description: 'Robot en action', src: p0 },
+    { title: 'Atelier 1', filename: '1.jpg', description: 'Montage en groupe', src: p1 },
+    { title: 'Atelier 2', filename: '2.jpg', description: 'Assemblage detail', src: p2 },
+    { title: 'Atelier 3', filename: '3.jpg', description: 'Tests sur ordinateur', src: p3 },
+    { title: 'Atelier 4', filename: '4.jpg', description: 'Vue d’atelier', src: p4 },
+    { title: 'Atelier 5', filename: '5.jpg', description: 'Plan de travail', src: p5 },
+    { title: 'Atelier 6', filename: '6.jpg', description: 'Participants en action', src: p6 },
+    { title: 'Atelier 7', filename: '7.jpg', description: 'Photo de groupe', src: p7 },
   ];
 
   return (
