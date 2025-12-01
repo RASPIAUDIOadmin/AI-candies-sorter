@@ -3,9 +3,6 @@ import SectionHeader from '../components/SectionHeader';
 import FlowDiagram from '../components/FlowDiagram';
 import photo1 from '../photos/photo-1.jpg';
 import robotHead from '../photos/robot headwith eyes.png';
-import motor1 from '../photos/motor1.png';
-import motor2 from '../photos/motor2.png';
-import motor1and2 from '../photos/motor1and2.png';
 import p0 from '../photos/0.jpg';
 import p1 from '../photos/1.jpg';
 import p2 from '../photos/2.jpg';
@@ -33,9 +30,6 @@ const Introduction: React.FC = () => {
   const photoGallery = [
     { title: 'Photo 1', filename: 'photo-1.jpg', description: 'Vue rapprochee du robot en train de trier.', src: photo1 },
     { title: 'Tete du robot (avec yeux)', filename: 'robot headwith eyes.png', description: 'Les yeux mobiles sont fortement conseilles !', src: robotHead },
-    { title: 'Cablage moteur 1', filename: 'motor1.png', description: 'Servo Tri branche sur Arduino', src: motor1 },
-    { title: 'Cablage moteur 2', filename: 'motor2.png', description: 'Servo Distribution branche sur Arduino', src: motor2 },
-    { title: 'Les 2 moteurs', filename: 'motor1and2.png', description: 'Vue d’ensemble des deux servos branches', src: motor1and2 },
     { title: 'Atelier 0', filename: '0.jpg', description: 'Robot en action', src: p0 },
     { title: 'Atelier 1', filename: '1.jpg', description: 'Montage en groupe', src: p1 },
     { title: 'Atelier 2', filename: '2.jpg', description: 'Assemblage detail', src: p2 },
@@ -160,6 +154,7 @@ const Introduction: React.FC = () => {
           </p>
         </div>
       </details>
+
       {/* Galerie Photos collapsable */}
       <details className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm mb-8" open>
         <summary className="text-lg font-bold text-slate-700 mb-2 cursor-pointer flex items-center gap-2">
