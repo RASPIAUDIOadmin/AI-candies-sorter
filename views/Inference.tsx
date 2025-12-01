@@ -1,7 +1,6 @@
 import React from 'react';
 import SectionHeader from '../components/SectionHeader';
 import inferenceVideo from '../photos/Inference.mp4';
-import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const Inference: React.FC = () => {
   return (
@@ -55,7 +54,7 @@ const Inference: React.FC = () => {
           rel="noreferrer"
           className="inline-flex items-center gap-2 bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition-colors font-medium"
         >
-          Acceder au code P5.js <FaExternalLinkAlt className="text-xs" />
+          Acceder au code P5.js <i className="fas fa-external-link-alt text-xs"></i>
         </a>
       </details>
     </div>
